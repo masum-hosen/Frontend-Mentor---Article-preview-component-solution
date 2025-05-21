@@ -1,0 +1,210 @@
+/* font family */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  list-style-type: none;
+}
+:root {
+  --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+  --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+  --Grayish-Blue: hsl(212, 23%, 69%);
+  --Light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+img {
+  max-width: 100%;
+}
+span {
+  display: inline-block;
+}
+body {
+  font-family: "Monrope", sans-serif;
+  background-color: var(--Light-Grayish-Blue);
+}
+.container {
+  margin-inline: 1rem;
+  margin-block: 2rem;
+}
+.card {
+  margin-inline: auto;
+  background-color: white;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.image img {
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+
+.content {
+  padding-top: 2rem;
+  padding-bottom: 1.7rem;
+}
+.content .inner {
+  padding-inline: 1rem;
+}
+.content h1 {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  color: var(--Very-Dark-Grayish-Blue);
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+.content p {
+  line-height: 1.6;
+  color: var(--Desaturated-Dark-Blue);
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.profile img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+.profile .details {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+.profile .info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+  color: var(--Very-Dark-Grayish-Blue);
+  /* font-weight: 600; */
+}
+.profile .info span {
+  color: var(--Desaturated-Dark-Blue);
+}
+.shere-icon {
+  --size: 45px;
+  width: var(--size);
+  height: var(--size);
+  outline: none;
+  border: none;
+  background-color: var(--Light-Grayish-Blue);
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+}
+.shere-icon img {
+  --size: 23px;
+  width: var(--size);
+  height: var(--size);
+  object-fit: contain;
+}
+.social-links {
+  display: flex;
+  align-items: center;
+  background-color: var(--Very-Dark-Grayish-Blue);
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  padding-inline: 1rem;
+  bottom: -8rem;
+  transition: bottom 0.3s ease-in-out;
+}
+.social-links .d-flex {
+  display: flex;
+  gap: 1rem;
+}
+.social-links .links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.social-links span {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--Desaturated-Dark-Blue);
+}
+.active {
+  bottom: 0;
+}
+.shere-active {
+  background-color: #6e8098;
+}
+.shere-active-img img {
+  filter: brightness(10);
+}
+/* footer */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* media query */
+@media (min-width: 768px) {
+  .container {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    margin-block: 0;
+  }
+  .card {
+    width: 800px;
+    display: flex;
+    gap: 1rem;
+    overflow: visible;
+  }
+  .content {
+    padding-right: 1rem;
+    padding-bottom: 2rem;
+    flex-basis: 60%;
+  }
+  .image {
+    flex-basis: 40%;
+  }
+  .image img {
+    border-radius: 0;
+    border-bottom-left-radius: 1px;
+    border-top-left-radius: 1rem;
+    height: 100%;
+    object-fit: cover;
+  }
+  .social-links {
+    width: 250px;
+    height: 50px;
+    bottom: 7.3rem;
+    right: -4rem;
+    border-radius: 1rem;
+    transform: scale(0);
+    transition: transform 0.3s ease-in-out;
+  }
+  .active {
+    transform: scale(1);
+  }
+  .social-links .d-flex {
+    justify-content: center;
+    width: 100%;
+  }
+  .inverted-triangle {
+    --width: 23px;
+    width: 0;
+    height: 0;
+    border-left: var(--width) solid transparent;
+    border-right: var(--width) solid transparent;
+    border-top: var(--width) solid var(--Very-Dark-Grayish-Blue);
+    position: absolute;
+    left: 53%;
+    transform: translate(-50%);
+    bottom: -0.9rem;
+  }
+}
