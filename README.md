@@ -17,8 +17,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/masum-hosen/Frontend-Mentor---Article-preview-component-solution)
-- Live Site URL: [Add live site URL here](https://stalwart-alpaca-e90a5f.netlify.app/)
+- Solution URL: [Solution URL here](https://github.com/masum-hosen/Frontend-Mentor---Article-preview-component-solution)
+- Live Site URL: [Live site URL here](https://stalwart-alpaca-e90a5f.netlify.app/)
 
 ## My process
 
